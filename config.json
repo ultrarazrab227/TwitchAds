@@ -1,1 +1,14 @@
-{"link": "https://www.twitch.tv/papaplatte", "ChromePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", "ThreadsNum": 1, "Window": 1, "users": [1819042943, 528328359], "interval": [60, 120]}
+{
+  "link": "https://www.twitch.tv/papaplatte",
+  "ChromePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+  "ThreadsNum": 1,
+  "WindowOpen": 1,
+  "users": [
+    1819042943,
+    528328359
+  ],
+  "interval": [
+    60,
+    120
+  ]
+}
