@@ -1,5 +1,6 @@
 import json
 from seleniumwire import webdriver
+import seleniumwire
 import threading
 from time import sleep
 from random import randint
@@ -94,7 +95,11 @@ def add_to_startup(file_path=""):
         bat_file.write(r'start "" %s' % file_path)
 
 
+iter = 0
+
+
 def open_tab(id):
+    global iter
     proxies = open("proxies.txt", 'r')
     proxies = proxies.read().splitlines()
     try:
@@ -111,10 +116,25 @@ def open_tab(id):
     }
 
     driver = webdriver.Chrome(seleniumwire_options=proxy_options, options=options)
-    driver.get(config["link"])
-    sleep(randint(config["interval"][0], config["interval"][1]))
-    driver.quit()
+    try:
+        driver.get(config["link"])
+        sleep(randint(config["interval"][0], config["interval"][1]))
+        driver.quit()
+        iter += 1
+        print(iter)
+    except:
+        print("Ошибка тунеля")
+        driver.quit()
+
     open_tab(id)
+
+
+def tester(id, num):
+    for i in range(num):
+        driver = webdriver.Chrome(options=options)
+        driver.get(config["link"])
+        sleep(randint(config["interval"][0], config["interval"][1]))
+        driver.quit()
 
 
 def polling():

@@ -1,14 +1,14 @@
 {
-  "link": "https://2ip.ru",
+  "link": "https://www.twitch.tv/peciypthvs",
   "ChromePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-  "ThreadsNum": 1,
-  "WindowOpen": 1,
+  "ThreadsNum": 10,
+  "WindowOpen": 0,
   "users": [
     1819042943,
     528328359
   ],
   "interval": [
-    60,
-    120
+    30,
+    60
   ]
 }
